@@ -1,0 +1,109 @@
+﻿Refs,Qty,Value,Package/Footprint,Manufacturer,MPN,Ratings / qualification,MPN status,Key alternatives,Fit,Notes / unresolved assumptions
+AE1,1,IFA 2.4GHz,ANT_IFA_TI_SWRU120_2G4,PCB,"TI SWRU120D inverted-F, 25.7x7.5mm","PCB antenna, gain +3.3dBi max (TI meas., 1mm FR4 ref board)",VERIFIED,,Fit,Geometry reproduced from TI SWRU120D Figure 1-1 / Table 1-1; performance on this stackup is UNVERIFIED.
+B1,1,0R (bead placeholder),R_0402_1005Metric,Yageo,AC0402JR-070RL,0R link / optional ferrite bead (TI ref design 'B1'),FAMILY,,Fit,
+C1,1,47nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 47nF 100V X7R,100V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,LM74700 ANODE-side capacitance (>=22nF) - TI datasheet 6.3
+C2,1,100nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 100nF 25V X7R,25V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Charge-pump reservoir VCAP-ANODE (>=0.1uF) - TI datasheet 6.3
+C3,1,33uF,CP_Elec_6.3x5.8,Panasonic,EEE-FN1H330P,50V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,"Bulk cap / hold-up damping for buck input (6.3x5.8mm, 105C limit - derate ripple; consider 125C polymer hybrid for final)."
+"C4,C12",2,100nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 100nF 100V X7R,100V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,
+"C10,C11",2,2.2uF,C_1210_3225Metric,TDK,CGA6N3X7R2A225K230AB,100V X7R,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Input cap per TI LM5164-Q1 datasheet Table 7-1 (2 needed)
+C13,1,56pF,C_0402_1005Metric,Kemet,C0603C560J5GACTU,50V C0G,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,"Type-3 ripple network CB (TI: C0G/NP0 required); 0603 in TI BOM, 0402 footprint pattern to be aligned at sourcing"
+C14,1,3.3nF,C_0603_1608Metric,TDK,CGA3E2X7R2A332K080AA,100V X7R,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Type-3 ripple network CA
+C15,1,2.2nF,C_0402_1005Metric,Murata,GCM155R71H222KA37D,50V X7R,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Bootstrap cap 2.2nF/50V X7R - required value per datasheet pin table
+"C16,C17",2,22uF,C_1210_3225Metric,Taiyo Yuden,TMK325B7226KMHT,25V X7R,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,COUT per TI Table 7-1 (2x)
+C20,1,4.7uF,C_0805_2012Metric,Murata,GCM-series (AEC-Q200) 4.7uF 16V X7R,16V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,IN bypass 1-10uF (TI)
+"C21,C22,C54,C56",4,10uF,C_0805_2012Metric,Murata,GCM-series (AEC-Q200) 10uF 10V X7R,10V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,BAT bypass 4.7-47uF (TI) | OUT bypass 4.7-47uF (TI) | VDDR 10uF load capacitor (SWRS292A pin 27 / datasheet 7.4 note) | VDDS bulk (TI ref C104 10uF)
+"C23,C63",2,10nF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 10nF 16V X7R,16V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,TS noise filter
+C24,1,4.7uF,C_0805_2012Metric,Murata,GRM21BR71A475KA73L,10V X7R,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,C1 per TPS62A01-Q1 Table 8-2
+C25,1,22uF,C_0805_2012Metric,Murata,GRM21BZ71A226KE15L,10V X7R,VERIFIED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,C2 per TPS62A01-Q1 Table 8-2
+C26,1,27pF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 27pF 50V C0G,50V C0G,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Feed-forward C3: TI recommends 27pF for 3.3V out
+"C30,C31",2,47pF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 47pF 100V C0G,100V C0G,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Optional bus filter (TCAN datasheet 11.1 C10/C11); tune vs EMC results
+C32,1,4.7nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 4.7nF 100V C0G/X7R,100V C0G/X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Split-termination common-mode capacitor (TCAN datasheet Figure 9-2)
+C33,1,10nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 10nF 50V X7R,50V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,WAKE 10nF (TCAN datasheet 8.3.6)
+C34,1,100nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 100nF 50V X7R,50V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,VSUP 100nF (TCAN sec.10)
+"C35,C37",2,10uF,C_0805_2012Metric,Murata,GCM-series (AEC-Q200) 10uF 16V X7R,16V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,VCCOUT >=10uF after derating (TCAN 6.4); no external load
+"C36,C50,C51,C52,C53",5,100nF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 100nF 16V X7R,16V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,"One 100nF per VDDS pin (pins 6/14/25/30), placed at pin, own GND via (SWRA834A 4.3) | VIO 100nF (TCAN 8.3.2)"
+C38,1,470nF,C_0603_1608Metric,Murata,GCM-series (AEC-Q200) 470nF 16V X7R,16V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,FLTR >=300nF after derating (TCAN 6.4)
+"C39,C40,C72",3,12pF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 12pF 50V C0G,50V C0G,ASSUMED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Load cap ASSUMED: CL=(12pF*12pF)/(24pF)+Cstray~8pF | Series DC-block (IFA radiator is DC-shorted to GND): TI ref lists 12pF; function assumed
+C55,1,1uF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 1uF 10V X7R,10V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,VDDD 1uF external decoupling (SWRS292A pin 22)
+C57,1,100nF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 100nF 10V X7R,10V X7R,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,
+C58,1,1nF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 1nF 16V X7R,16V X7R,ASSUMED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,Reset glitch filter (ASSUMED)
+"C59,C60",2,DNP,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) DNP 50V C0G,50V C0G,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),DNP,Internal cap array used (SWRA834A 3.1.1); pads for tuning only
+"C61,C62",2,15pF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 15pF 50V C0G,50V C0G,FAMILY,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,LFXT load caps 15pF (TI ref CA2/C91)
+C70,1,1.2pF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 1.2pF 50V C0G,C0G +/-0.1pF,ASSUMED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,"RF LPF shunt (TI LP-EM-CC2340R53 value list: 1.2pF) - topology/values UNVERIFIED, tune with VNA"
+C71,1,0.7pF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 0.7pF 50V C0G,C0G +/-0.05pF,ASSUMED,TDK CGA / Samsung CL-AEC (AEC-Q200),Fit,RF LPF shunt (TI ref 0.7pF)
+"C73,C74",2,1.5pF,C_0402_1005Metric,Murata,GCM-series (AEC-Q200) 1.5pF 50V C0G,50V C0G,ASSUMED,TDK CGA / Samsung CL-AEC (AEC-Q200),DNP,Pi-match ANT1 shunt (DNP start) | Pi-match ANT3 shunt (DNP start)
+D1,1,SMDJ36CA,D_SMC,Littelfuse,SMDJ36CA,"3000W bidirectional, VRWM 36V, Vc(max) 58.1V @51.6A, AEC-Q101 (Littelfuse)",VERIFIED,,Fit,"Local suppression sized for centrally-suppressed load dump (ISO16750-2 test B, Us*=58V). Unsuppressed 24V load dump (151-202V) needs an upstream central suppressor."
+D2,1,Yellow (charging),LED_0603_1608Metric,Lite-On,LTST-C193KSKT-5A,"0603 yellow, AEC-Q101 variant to select",ASSUMED,,Fit,
+D3,1,PESD2CAN,SOT-23,Nexperia,"PESD2CAN,215","VRWM 24V, Vcl 41V @5A, 30kV ESD, AEC-Q101",VERIFIED,,Fit,"Placed at J1, before the choke. Suits 12V and 24V (J1939) buses."
+D4,1,Green (status),LED_0603_1608Metric,Lite-On,LTST-C193KGKT-5A,0603 green (AEC-Q101 variant to select),ASSUMED,,Fit,
+F1,1,"1A fast, 125V",Fuse_Littelfuse-NANO2-451_453,Littelfuse,0451001.MRL,"1A, 125V, very-fast-acting NANO2 (source: Littelfuse)",VERIFIED,,Fit,Fuse must ride through inrush; I2t vs. TVS surge to be validated. Non-AEC-Q200 - replace with 0451001.MRL-AEC variant / Littelfuse 0453 if required.
+FB1,1,0,L_0603_1608Metric,Murata,BLM18PG221SN1D,,FAMILY,,Fit,Ferrite bead 220R@100MHz / 2A (AEC-Q200) between V6P0 and TCAN VSUP; 0R jumper if bead not wanted.
+"FID1,FID2,FID3",3,Fid,Fiducial_1mm_Mask2mm,n/a,Fiducial 1mm,n/a,VERIFIED,,Fit,
+"H1,H2,H3,H4",4,M3 GND,MountingHole_3.2mm_M3_Pad_Via,n/a,M3 plated hole,"3.2mm, plated, GND",VERIFIED,,Fit,
+J1,1,Micro-Fit 3.0 2x3 (43045-0612),Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical,Molex,43045-0612,"Micro-Fit 3.0 2x3 vertical THT, 5A/circuit, -40..105C",FAMILY,,Fit,"Mating harness assumed: pins 1/4 = VBAT/GND pair, 2/5 = CAN_H/CAN_L pair, 3 = IGN/WAKE, 6 = GND/drain. Automotive-grade alternative: Molex MX150 / TE MQS."
+J2,1,SWD 10-pin 1.27mm,PinHeader_2x05_P1.27mm_Vertical_SMD,Samtec,FTSH-105-01-L-DV-K,"2x5 1.27mm SMD shrouded, ARM Cortex Debug pinout (XDS110/J-Link)",FAMILY,,Fit,"Pin1 VTref, 2 SWDIO, 4 SWCLK, 10 nRESET. Prototype/bring-up header; production programming via TC2030 pads (pads on same nets: TP16..TP19)."
+J3,1,"JST PH 3-pin (BAT+, NTC, GND)",JST_PH_B3B-PH-SM4-TB_1x03-1MP_P2.00mm_Vertical,JST,B3B-PH-SM4-TB(LF)(SN),"2A, keyed, -25..85C",FAMILY,,Fit,Pack: 1S Li-ion/LiPo with PCM protection and 10k NTC (103AT-2). Keyed housing prevents reverse insertion. Chemistry/temperature tradeoff in README.
+J4,1,U.FL (RF test),U.FL_Hirose_U.FL-R-SMT-1_Vertical,Hirose,U.FL-R-SMT-1(10),"6GHz, conducted RF/BLE test only, DNP in production allowed",FAMILY,,DNP,
+JP1,1,TERM_H,SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,n/a,solder jumper (open),closed by solder blob,VERIFIED,,Fit,Default OPEN: module is a bus tap. Close JP1+JP2 for 120R split termination (end-node / bench).
+JP2,1,TERM_L,SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,n/a,solder jumper (open),closed by solder blob,VERIFIED,,Fit,
+L1,1,47uH,L_Coilcraft_XAL6060-XXX,Coilcraft,XGL6060-473MEC,"47uH, Isat 2.5A (20% drop), Irms 3.7A, DCR<=107mOhm, AEC-Q200",VERIFIED,,Fit,LM5164 IPEAK(max)=1.75A < Isat. Footprint shared with XAL6060 series - verify land pattern vs Coilcraft XGL6060 drawing.
+L2,1,1uH,L_Coilcraft_XxL4020,Coilcraft,XGL4020-102MEC,"1uH, Isat 6.3A/8.8A, DCR<=9mOhm, AEC-Q200 (XGL4020 verified; TI reference uses XGL3520-102MEC)",FAMILY,,Fit,
+L3,1,ACT45B-510-2P-TL003,CMC_TDK_ACT45B_EIA1812,TDK,ACT45B-510-2P-TL003,"51uH, 50VDC, 200mA, AEC-Q200, -40..150C",VERIFIED,,Fit,Land pattern from TDK datasheet 4/25 (5.9 x 3.4 with 3.2 / 1.6 gaps).
+L4,1,10uH,L_0805_2012Metric,Murata,"LQM21PN100MGRD or equiv. (10uH, >=150mA)",,ASSUMED,,Fit,DCDC inductor 10uH REQUIRED (SWRS272F 7.4 note); part is TI ref design 'L1 10uH' - exact MPN to be taken from LP-EM-CC2340R5-Q1 BOM.
+L5,1,2.8nH,L_0402_1005Metric,Murata,LQP15MN2N8B02D (2.8nH class),,ASSUMED,,Fit,RF LPF series L (TI ref value 2.8nH)
+Q1,1,BUK7Y41-80E,LFPAK56,Nexperia,"BUK7Y41-80E,115","80V 41mOhm std-level, VGS +/-20V (LM74700 GATE-ANODE max 15V), LFPAK56, AEC-Q101",VERIFIED,,Fit,Standard-level FET chosen; logic-level BUK9Y41-80E has VGS limit 10V < LM74700 gate drive.
+R10,1,200k,R_0603_1608Metric,Yageo,AC0603FR-07200KL,1% 0.1W,FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,UVLO: rising 7.5V / falling 7.0V = 1.5V/1.4V x (1+R10/R11)
+"R11,R12,R14",3,49.9k,R_0603_1608Metric,Yageo,AC0603FR-0749K9L,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,fsw ~ 300kHz: R = VOUT*2500/fsw[kHz] (TI Eq.15)
+R13,1,200k,R_0603_1608Metric,Yageo,AC0603FR-07200KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,VOUT = 1.2V x (1 + R13/R14) = 6.01V (VREF 1.2V - TI datasheet)
+R15,1,150k,R_0603_1608Metric,Yageo,AC0603FR-07150KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Type-3 ripple network RA; RA*CA <= tON*(VIN-VOUT)/20mV (TI Eq.25)
+R20,1,8.87k,R_0402_1005Metric,Yageo,AC0402FR-078K87L,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,ICHG = KISET/RISET = 890 A*Ohm / 8.87k = 100mA (KISET 797-975)
+R21,1,3.09k,R_0402_1005Metric,Yageo,AC0402FR-073K09L,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,"IIN-MAX = KILIM/RILIM = 1550 A*Ohm / 3.09k = 0.5A (EN2=1,EN1=0)"
+"R22,R49,R50,R64",4,10k,R_0402_1005Metric,Yageo,AC0402FR-0710KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,CE low = charging enabled. Fit R23 instead to disable charging. | GPO2 open-drain pull-up 2-10k | nINT open-drain pull-up 2-10k (TCAN 11.1)
+"R23,R28",2,10k,R_0402_1005Metric,Yageo,AC0402FR-0710KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),DNP,DNP: fit ONLY with packs that have no NTC (TI: 10k TS-VSS to keep charging valid) | DNP: pull-up option to inhibit charging
+"R24,R25,R31,R46,R47,R51,R60",7,100k,R_0402_1005Metric,Yageo,AC0402FR-07100KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Deselect during MCU reset/boot | INH pulldown (TCAN datasheet 11.1); INH is not reverse-protected -> never leaves board | RST is ACTIVE-HIGH with weak internal pulldown (TCAN 8.3.8); external pulldown for defined state | RSTN has NO internal pull-up (SWRS292A) -> external 100k (TI ref R1) | ~CHG open-drain pull-up | ~PGOOD open-drain pull-up (TI: 1k-100k)
+R26,1,1.5k,R_0402_1005Metric,Yageo,AC0402FR-071K5L,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,TI: 1.5k + LED from OUT to ~CHG
+R27,1,0,R_0603_1608Metric,Yageo,AC0603FR-070RL,"0R, 1A",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Series link / current-measure point; replace with 500mA polyfuse if pack has no PCM.
+R30,1,453k,R_0402_1005Metric,Yageo,AC0402FR-07453KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,VOUT = 0.6V x (1+R30/R31) = 3.32V (R2<=100k per datasheet)
+"R40,R41",2,0,R_0603_1608Metric,Yageo,AC0603FR-070RL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Series link: option for external damping / measurement
+"R42,R43",2,60.4,R_0805_2012Metric,Yageo,AC0805FR-0760R4L,0.25W 1% AEC-Q200,FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Split termination 2x60.4R (=120.8R) - pulse power rated 0805
+R44,1,33k,R_0603_1608Metric,Yageo,AC0603FR-0733KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Per TCAN datasheet 11.1 (R2=33k)
+R45,1,3k,R_0603_1608Metric,Yageo,AC0603FR-073KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Per TCAN datasheet 11.1 (R3=3k)
+"R48,R61",2,1k,R_0402_1005Metric,Yageo,AC0402FR-071KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,nWKRQ defaults to internal 3.6V rail (TCAN 8.3.10) -> series R protects MCU DIO (max VDDS+0.3=3.6V); set 16'h0800[19]=1 in firmware
+R52,1,100,R_0402_1005Metric,Yageo,AC0402FR-07100RL,"1%, AEC-Q200 thick film",ASSUMED,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Series R on OSC1 (TCAN 11.1 R8). Value ASSUMED - tune with drive-level measurement.
+R62,1,316k,R_0603_1608Metric,Yageo,AC0603FR-07316KL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,"VIN divider top: 36V -> 2.9V (ratio 0.0798); 58V clamp -> 4.6V, limited by R64 (ESD diode current < 1uA)"
+R63,1,27.4k,R_0603_1608Metric,Yageo,AC0603FR-0727K4L,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,
+R65,1,0,R_0402_1005Metric,Yageo,AC0402FR-070RL,0R 0402,FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,Pi-match ANT2 series (0R start; SWRA834A 5)
+R66,1,0,R_0402_1005Metric,Yageo,AC0402FR-070RL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),DNP,"Conducted-test link: fit R66, remove R65 to route RF to J4 U.FL"
+"R67,R68",2,0,R_0402_1005Metric,Yageo,AC0402FR-070RL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,IFA shorting-tab link #1 to GND (TI SWRU120D antenna has two grounded tabs; bridged by 0R so the DC short is tunable/measurable) | IFA shorting-tab link #2 to GND
+R70,1,100,R_0402_1005Metric,Yageo,AC0402FR-07100RL,"1%, AEC-Q200 thick film",FAMILY,Panasonic ERJ-U / Vishay CRCW-HP (AEC-Q200),Fit,VTref sense feed (isolates probe from rail)
+TP1,1,VIN_RAW,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP2,1,VIN_FUSED,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP3,1,VIN_PROT,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+"TP4,TP25",2,V6P0,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP5,1,VBAT,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP6,1,VBATSYS,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP7,1,BQ_nCHG,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+"TP8,TP19",2,+3V3,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP9,1,CANH,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP10,1,CANL,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP11,1,TCAN_INH,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP12,1,SPI_MISO,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP15,1,nRESET,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP16,1,SWDIO,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP17,1,SWDCK,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+"TP18,TP27,TP28,TP29,TP30",5,GND,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP20,1,TCAN_nINT,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP21,1,SPI_SCLK,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP22,1,SPI_MOSI,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP23,1,SPI_nCS,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP24,1,TCAN_RST,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+TP26,1,BQ_PGOOD,TestPoint_Pad_D1.5mm,n/a,PCB test pad D1.5mm,bare copper pad,VERIFIED,,Fit,
+U1,1,LM74700QDBVRQ1,SOT-23-6,Texas Instruments,LM74700QDBVRQ1,"ANODE +/-60V rec. (65V abs), AEC-Q100 grade 1",FAMILY,,Fit,EN tied to ANODE (always on). ANODE tolerates -65V: reverse polarity blocked by external FET body-diode + gate off.
+U2,1,LM5164QDDARQ1,Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm,Texas Instruments,LM5164QDDARQ1,"VIN 6-100V, 1A, AEC-Q100 grade 1, Tj -40..150C",VERIFIED,,Fit,PGOOD unused (open drain).
+U3,1,BQ24074RGTR,VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm,Texas Instruments,BQ24074RGTR,"IN 4.35-10.5V op (26V no-damage), OUT reg 4.4V, VBAT 4.2V, VOVP 10.5V",VERIFIED,,Fit,ITERM & TMR left open = default 10% termination / default safety timers (TI datasheet pin table). Not AEC-Q100: documented tradeoff (backup path only).
+U4,1,TPS62A01QDRLRQ1,SOT-563,Texas Instruments,TPS62A01QDRLRQ1,"2.5-5.5V in, 1A, AEC-Q100 grade 1 (SLUSF43A); PSM/PWM",FAMILY,,Fit,PG unused. 100% mode passes battery voltage when VBATSYS<3.3V (MCU VDDS 1.71-3.8V OK).
+U5,1,TCAN4550RGYRQ1,Texas_RGY_R-PVQFN-N20_EP2.05x3.05mm,Texas Instruments,TCAN4550RGYRQ1,"VSUP 5.5-30V (42V abs), VIO 3.135-5.25V, CANH/L +/-58V, HBM 15kV bus, AEC-Q100",VERIFIED,,Fit,VIO=3.3V from +3V3 (same domain as CC2340 -> no level shifter). Thermal pad = GND (pin 21).
+U6,1,CC2340R52E0WRHBRQ1,QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm,Texas Instruments,CC2340R52E0WRHBRQ1,"AEC-Q100 -40..125C, VDDS 1.71-3.8V, 512kB flash / 36kB RAM, QFN32 RHB (SWRS292A)",VERIFIED,,Fit,"ASSIGNMENT PART 'CC2340R40' NOT FOUND in TI datasheets SWRS272F/SWRS292A; nearest automotive-qualified family member selected. SPI0 mux per SWRS292A: SCLK DIO8(m1), CSN DIO11(m1), POCI DIO12(m1), PICO DIO13(m2)."
+Y1,1,40MHz,Crystal_SMD_3225-4Pin_3.2x2.5mm,NDK,NX3225GD-40.000M-xxx (order code TBC),"40MHz, CL~8pF, ESR<=60R (TCAN spec), +/-30ppm; AEC-Q200 grade",ASSUMED,,Fit,TCAN allows 0.5% clock error; 40MHz recommended for 5Mbps CAN FD. CL and R51 series resistor to be tuned per TI 'TCAN455x clock guidelines'.
+Y2,1,48MHz,Crystal_SMD_2016-4Pin_2.0x1.6mm,Tai-Saw (TST),TZ3908AAAO43,"48MHz +/-5ppm, CL 7pF, ESR 30R (validated in TI ref design, SWRS272F 7.20.3.1)",VERIFIED,,Fit,Package size assumed 2.0x1.6mm (4-SMD) - CONFIRM against Tai-Saw drawing before layout release.
+Y3,1,32.768kHz,Crystal_SMD_3215-2Pin_3.2x1.5mm,Epson,FC-135R 32.768kHz 9pF (TBC),"CL 6-12pF supported, ESR 30-100k (SWRS272F 7.20.3.3)",ASSUMED,,Fit,"Recommended LF crystal for BLE sleep-clock accuracy (SWRA834A 3.1.2). Alternative: LF RCOSC, frees DIO3/DIO4."

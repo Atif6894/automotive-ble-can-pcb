@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "bytebeam")(type "KiCad")(uri "${KIPRJMOD}/lib/bytebeam.kicad_sym")(options "")(descr "Bytebeam datasheet-derived symbols"))
+)

@@ -1,0 +1,21 @@
+# WindBorne Submission Checklist
+
+- [ ] Public GitHub repository created (`automotive-ble-can-pcb`)
+- [x] README complete
+- [x] Schematic PDF readable (`schematic/schematic.pdf`, 7 A3 pages)
+- [x] PCB layout image readable (`images/pcb_layout_top.png`, per-layer images)
+- [x] 3D top image
+- [x] 3D bottom image
+- [x] Architecture diagram
+- [x] BOM
+- [x] Selected documentation (power budget, stackup, validation plan, DFMEA, datasheet trace)
+- [x] No secrets (scanned)
+- [x] No personal credentials
+- [x] No AI chat logs
+- [x] No temporary files
+- [x] No nested .git/history
+- [ ] All GitHub links tested (after push, click every link in README)
+- [ ] Resume URL placeholder replaced
+- [ ] submission_url ready (GitHub repo URL)
+- [x] POST request prepared (`submit_windborne.py` / `submit_windborne.ps1`)
+- [ ] HTTP 200 must be verified after submission

@@ -1,0 +1,17 @@
+# KiCad local/temp files
+*.kicad_prl
+*-backups/
+*.bak
+*.lck
+_autosave-*
+fp-info-cache
+\#auto_saved_files#
+.history/
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+# Python
+__pycache__/
+*.pyc

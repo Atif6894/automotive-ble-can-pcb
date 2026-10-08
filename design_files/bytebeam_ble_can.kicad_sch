@@ -1,0 +1,341 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6")
+	(paper "A3")
+	(title_block
+		(title "Bytebeam Automotive BLE-CAN Module (TCAN4550 + CC2340R5-Q1)")
+		(date "2026-09-29")
+		(rev "A")
+		(company "Bytebeam hardware design assignment - pre-fabrication design review release")
+	)
+	(lib_symbols)
+	(text "Sheets: 1 input protection | 2 6V0 buck | 3 battery + 3V3 | 4 CAN FD | 5 MCU/BLE/RF | 6 debug/test/mechanical.   Architecture diagram: docs/architecture.svg"
+		(exclude_from_sim yes)
+		(at 25.4 28.5 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left top)
+		)
+		(uuid "37dc3a75-a47d-452d-826a-cb4a4001b86d")
+	)
+	(text "Bytebeam Automotive BLE-CAN Module - Rev A (pre-fabrication design review)"
+		(exclude_from_sim yes)
+		(at 25.4 12 0)
+		(effects
+			(font
+				(size 3.5 3.5)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "4f9f1e17-b4f3-45fe-8b53-2102cdbb9db1")
+	)
+	(text "NOTE: the assignment names 'CC2340R40'; no such part exists in TI datasheets SWRS272F/SWRS292A - the AEC-Q100 CC2340R52E0WRHBRQ1 (CC2340R5-Q1 family) is used."
+		(exclude_from_sim yes)
+		(at 25.4 33.9 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left top)
+		)
+		(uuid "b272e0f7-4833-439d-8877-37cf534ead77")
+	)
+	(text "TCAN4550-Q1 CAN FD  +  CC2340R5-Q1 BLE  |  9-36V vehicle supply (survives reverse battery, centrally-suppressed load dump 58V)  |  1S Li-ion backup provision (BQ24074)"
+		(exclude_from_sim yes)
+		(at 25.4 22.5 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left top)
+		)
+		(uuid "df83e9d6-e1a9-4360-8689-19dc0da23077")
+	)
+	(sheet
+		(at 25.4 76.2)
+		(size 100 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0614c7ef-8eba-46f8-8d18-4e6ca032673e")
+		(property "Sheetname" "1_Power_Input"
+			(at 25.4 75.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pwr_input.kicad_sch"
+			(at 25.4 102.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bytebeam_ble_can"
+				(path "/5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 265.4 116.2)
+		(size 100 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0ec6547d-0cba-44b1-8f99-d10d6eca4587")
+		(property "Sheetname" "6_Debug_Test_Mech"
+			(at 265.4 115.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "debug_test.kicad_sch"
+			(at 265.4 142.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bytebeam_ble_can"
+				(path "/5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 265.4 76.2)
+		(size 100 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "69aa2216-2253-43cc-8d75-d82b74a0741c")
+		(property "Sheetname" "3_Battery_3V3"
+			(at 265.4 75.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pwr_battery.kicad_sch"
+			(at 265.4 102.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bytebeam_ble_can"
+				(path "/5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 145.4 76.2)
+		(size 100 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "aa96cf3f-526b-4336-8113-db1d21bbac70")
+		(property "Sheetname" "2_Buck_6V0"
+			(at 145.4 75.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pwr_buck.kicad_sch"
+			(at 145.4 102.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bytebeam_ble_can"
+				(path "/5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 145.4 116.2)
+		(size 100 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b107a1fb-afc2-4018-87a2-ad634fe7f738")
+		(property "Sheetname" "5_MCU_BLE_RF"
+			(at 145.4 115.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_ble.kicad_sch"
+			(at 145.4 142.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bytebeam_ble_can"
+				(path "/5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 116.2)
+		(size 100 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d4ee3969-98df-4698-8974-2066c6c3ad17")
+		(property "Sheetname" "4_CAN_FD"
+			(at 25.4 115.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "can_fd.kicad_sch"
+			(at 25.4 142.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bytebeam_ble_can"
+				(path "/5ae8b9ea-a5ea-43a9-8c04-cd436b522ee6"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

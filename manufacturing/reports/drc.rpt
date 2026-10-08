@@ -1,0 +1,175 @@
+** Drc report for bytebeam_ble_can.kicad_pcb **
+** Created on 2026-10-08T09:41:44 **
+** Report includes: Errors, Warnings **
+
+** Found 45 DRC violations **
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(42.4250 mm, 48.0750 mm): Via [/5_MCU_BLE_RF/LED_DRV] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(44.3750 mm, 64.8250 mm): Via [/3_Battery_3V3/BUCK3_FB] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(33.5750 mm, 45.5750 mm): Via [SPI_nCS] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(55.7250 mm, 73.5750 mm): Via [SPI_nCS] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(57.2250 mm, 75.1450 mm): Via [TCAN_GPO2] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(60.5250 mm, 75.1450 mm): Via [/4_CAN_FD/TCAN_WAKE_PIN] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(61.2750 mm, 71.5750 mm): Via [/4_CAN_FD/TCAN_FLTR] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(59.6250 mm, 68.4250 mm): Via [/4_CAN_FD/TCAN_OSC2] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(33.5750 mm, 47.0750 mm): Via [/5_MCU_BLE_RF/+3V3_MCU] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(39.1250 mm, 50.3750 mm): Via [/5_MCU_BLE_RF/+3V3_MCU] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(53.9500 mm, 58.0750 mm): Via [/3_Battery_3V3/VBATSYS] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(54.7000 mm, 58.5750 mm): Via [/3_Battery_3V3/VBATSYS] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(50.1250 mm, 60.6500 mm): Via [/3_Battery_3V3/VBATSYS] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(40.6250 mm, 65.3250 mm): Via [/3_Battery_3V3/VBATSYS] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(41.6750 mm, 46.5750 mm): Via [/5_MCU_BLE_RF/X32P] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(51.6250 mm, 55.2500 mm): Via [V6P0] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(42.4250 mm, 47.0750 mm): Via [nRESET] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(50.1250 mm, 56.0000 mm): Via [/3_Battery_3V3/BQ_ISET] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(38.6250 mm, 43.0250 mm): Via [/5_MCU_BLE_RF/X48P] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(35.0750 mm, 44.5750 mm): Via [/5_MCU_BLE_RF/VDDR] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(37.1250 mm, 42.2750 mm): Via [/5_MCU_BLE_RF/RF_ANT] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(47.8000 mm, 58.0750 mm): Via [/3_Battery_3V3/VBAT] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(47.0500 mm, 58.5750 mm): Via [/3_Battery_3V3/VBAT] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2000 mm; actual 0.0781 mm)
+    Rule: board setup constraints; warning
+    @(52.5250 mm, 60.0750 mm): Via [GND] on F.Cu - B.Cu
+    @(52.6250 mm, 59.7625 mm): Via [GND] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2000 mm; actual 0.1926 mm)
+    Rule: board setup constraints; warning
+    @(56.8250 mm, 75.0250 mm): Via [TCAN_GPO2] on F.Cu - B.Cu
+    @(57.2250 mm, 75.1450 mm): Via [TCAN_GPO2] on F.Cu - B.Cu
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(64.9450 mm, 72.5750 mm): Reference field of C37
+    @(64.6350 mm, 73.7156 mm): Segment of C34 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(69.6377 mm, 72.5975 mm): Segment of R40 on F.Silkscreen
+    @(69.8750 mm, 73.1450 mm): Reference field of C30
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(47.3750 mm, 81.0250 mm): PCB text 'JP1+JP2 CLOSED = 120R TERM' on F.Silkscreen
+    @(51.9714 mm, 80.7050 mm): Segment of R46 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(49.6250 mm, 78.4150 mm): Reference field of C39
+    @(47.8150 mm, 78.0350 mm): Segment of Y1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(77.7950 mm, 59.3450 mm): Reference field of Q1
+    @(77.4844 mm, 58.8350 mm): Segment of C4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(92.3750 mm, 44.3750 mm): Reference field of FID2
+    @(91.3877 mm, 44.0975 mm): Segment of R14 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(52.1950 mm, 72.0750 mm): Reference field of FB1
+    @(51.0750 mm, 72.8750 mm): Arc of JP1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(52.1950 mm, 72.0750 mm): Reference field of FB1
+    @(51.7750 mm, 72.2750 mm): Segment of JP1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(52.1950 mm, 72.0750 mm): Reference field of FB1
+    @(51.0750 mm, 72.2750 mm): Arc of JP1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(49.8750 mm, 73.8750 mm): Reference field of Y1
+    @(51.0750 mm, 73.5750 mm): Segment of JP1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(49.6750 mm, 72.8750 mm): Arc of JP1 on F.Silkscreen
+    @(49.8750 mm, 73.8750 mm): Reference field of Y1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(64.9450 mm, 72.5750 mm): Reference field of C37
+    @(64.1250 mm, 72.8000 mm): Pad 2 [GND] of C34 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(47.3750 mm, 81.0250 mm): PCB text 'JP1+JP2 CLOSED = 120R TERM' on F.Silkscreen
+    @(51.6150 mm, 80.3250 mm): Pad 1 [/4_CAN_FD/TCAN_INH] of R46 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(47.3750 mm, 81.0250 mm): PCB text 'JP1+JP2 CLOSED = 120R TERM' on F.Silkscreen
+    @(52.6350 mm, 80.3250 mm): Pad 2 [GND] of R46 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(74.3750 mm, 26.5250 mm): PCB text 'BYTEBEAM BLE-CAN Rev A' on F.Silkscreen
+    @(86.3000 mm, 27.5750 mm): Pad 1 [/2_Buck_6V0/BUCK_SW] of R15 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.3750 mm, 44.3750 mm): Reference field of FID2
+    @(92.4500 mm, 43.5750 mm): Pad 2 [GND] of R14 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(35.8750 mm, 70.8750 mm): Reference field of J3
+    @(35.6050 mm, 70.3250 mm): Pad 2 [GND] of C23 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(64.3750 mm, 27.3250 mm): PCB text '4-layer 1.6mm JLC04161H-7628 ENIG' on B.Silkscreen
+    @(56.8750 mm, 25.8250 mm): PTH pad 1 [GND] of H4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(64.3750 mm, 27.3250 mm): PCB text '4-layer 1.6mm JLC04161H-7628 ENIG' on B.Silkscreen
+    @(58.5721 mm, 27.5221 mm): PTH pad 1 [GND] of H4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(64.3750 mm, 27.3250 mm): PCB text '4-layer 1.6mm JLC04161H-7628 ENIG' on B.Silkscreen
+    @(55.1779 mm, 27.5221 mm): PTH pad 1 [GND] of H4
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

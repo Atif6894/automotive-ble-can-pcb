@@ -1,0 +1,2 @@
+# Keep KiCad and fabrication files byte-exact (no line-ending conversion)
+* -text
